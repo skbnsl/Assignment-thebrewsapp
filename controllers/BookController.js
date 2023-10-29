@@ -122,7 +122,7 @@ async function deleteBook(req, res) {
         message: "Book-id is not valid",
       });
     }
-    await Book.findByIdAndUpdate(id);
+    await Book.findByIdAndDelete(id);
     return res.send({
       status: "success",
       message: "Book Deleted Successfully",
